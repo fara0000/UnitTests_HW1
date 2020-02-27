@@ -47,16 +47,17 @@ function getSumOfPositiveNumbers(num1,num2,num3) {
     
 }
 //№4(Conditional Operator)
-function getSumOfMax(a, b, c){
+function getSumOfMax(a, b, c) { 
     let sum = a + b + c; 
     let mul = a * b * c;
         if(!a && (a !== 0)  || !b && (b !== 0) || !c && (c !== 0) ) return 'Wrong input!';
-        return  mul > sum  ?  mul + 3 : sum +3;
+    
+    return  mul > sum  ?  mul + 3 : sum +3;
 }
-    console.log(getSumOfMax(2,2,3))
+console.log(getSumOfMax(2,2,3));
 
 //№5(Conditional Operator)
-function getAssessment(rating){
+function getAssessment(rating) {
     let result;
 
     if ((!rating && rating !== 0) || 0 > rating || rating > 100 || ( rating !== rating)){
@@ -79,9 +80,7 @@ function getAssessment(rating){
        
     return result;
 }
-    console.log(getAssessment(41));
-
-
+console.log(getAssessment(41));
 //№1(Loops)
 function SumofEvenNumbers() {
     let summary = 0;
@@ -89,10 +88,10 @@ function SumofEvenNumbers() {
     let quantity = 0;
    
     for(i = 2; i < 99; i += 2){
-       
         summary += i;
         quantity++;
     }
+    
     return`Summary is ${summary} , Quantity is ${quantity}.` ;  
     
 }
@@ -100,28 +99,28 @@ console.log(SumofEvenNumbers());
 //№2(Loops)
 function getSimpleNumber(num) {
     let i;
-    let result = 'Simple'
+    let result = 'Simple';
 
     if (!num || num === 0) result = 'Wrong input!'
     for(i = 2; i < num; i++) {
         if(num % i === 0) {
-           result  = 'Complicated' ;
-         } 
+           result  = 'Complicated';
+        } 
     }
 
     return result; 
 }
-console.log(getSimpleNumber(17))
+console.log(getSimpleNumber(17));
 //№3(Loops)
 function getSquareOfNumber(num) {
     if (!num) return 'Wrong Input!'
     let result = 0;
 
-    result = num ** (1/2) ;
+    result = num ** (1/2);
     
     return ~~result;
 }
-console.log(getSquareOfNumber(16))
+console.log(getSquareOfNumber(16));
 
 
 
@@ -129,31 +128,32 @@ console.log(getSquareOfNumber(16))
 
 
 //№4(Loops)
-function getFactorial(n){
+function getFactorial(n) {
     let i;
     let multiple = 1;
     
     if(n === 0) return multiple;
+    
     if(!n || n < 0 ) return 'Wrong input!'
     
-    for( i = 1 ; i <= n ; i++ ){  
+    for( i = 1 ; i <= n ; i++ ) {  
     multiple *=  i;
     }
     
     return multiple;
 }
-    console.log(getFactorial(3));
+console.log(getFactorial(3));
 //№5(Loops)
-function getSumOfDigits(num){
-        let a = 0;
-        let result = 0;
+function getSumOfDigits(num) {
+    let a = 0;
+    let result = 0;
 
     if(!num) return 'Booom Try Again!'
 
     while(num){
-            a = num % 10
-            num = (num - a)/10
-            result = result + a
+        a = num % 10
+        num = (num - a)/10
+        result = result + a
             
             if(!num){
                return result; 
@@ -192,17 +192,17 @@ function getMinElement(arr){
         }
     }
     
-            return min;
+    return min;
 }
-    let array = [4, 7, 0, 1];
+let array = [4, 7, 0, 1];
 console.log(getMinElement(array));
  //№2(Arrays)
-function getMaxElement(arr){
+function getMaxElement(arr) {
     if(!arr || arr.length === 0 || (typeof(arr) !== 'object')) return 'Wrong Input!'
 
     let max = arr[0];
     
-    for(i = 1; i < arr.length; i++){
+    for(i = 1; i < arr.length; i++) {
         if(max < arr[i]){
             max = arr[i]; 
         }
@@ -210,33 +210,34 @@ function getMaxElement(arr){
 
             return max;
 }
-    let array2 = [13, 11, 9, 3];
-    console.log(getMaxElement(array2));     
+let array2 = [13, 11, 9, 3];
+console.log(getMaxElement(array2));     
 //№3(Arrays)
-function getMinIndex(arr){
+function getMinIndex(arr) {
     if(!arr || arr.length === 0 || (typeof(arr) !== 'object')) return 'Wrong Input!'
     let min = arr[0];
     let minIndex = 0 ;
 
-    for( let i = 1; i < arr.length; i++){
-        if(min > arr[i]){
+    for( let i = 1; i < arr.length; i++) {
+        if(min > arr[i]) {
             min = arr[i];
             minIndex = i;
         }
     }
 
-            return minIndex ;
+    return minIndex ;
 }
-    let array3 = [3, 4, 6, 7];
-    console.log(getMinIndex(array3));
+
+let array3 = [3, 4, 6, 7];
+console.log(getMinIndex(array3));
 //№4(Arrays)
 function getMaxIndex(arr){
     if(!arr || arr.length === 0 || (typeof(arr) !== 'object')) return 'Wrong Input!'
     let max = arr[0];
     let indexOfMax = 0;
     
-    for(i = 1; i < arr.length ; i++){
-        if(max < arr[i]){
+    for(i = 1; i < arr.length ; i++) {
+        if(max < arr[i]) {
             max = arr[i]; 
             indexOfMax = i;
         }
@@ -244,29 +245,31 @@ function getMaxIndex(arr){
 
     return indexOfMax;
 }
+
 let array4 = [13, 11, 9, 3];
 console.log(getMaxIndex(array4));
 //№5(Arrays)
-function getSumOfOddIndex(arr){
+function getSumOfOddIndex(arr) {
     if(!arr || arr.length === 0 || (typeof(arr) !== 'object')) return 'Wrong Input!'
     let sum = 0;
     
      
-    for(i = 0 ; i<arr.length ; i++){
+    for(i = 0 ; i<arr.length ; i++) {
         if (i % 2 !== 0)
             sum =  sum + arr[i]
     }
     
     return sum;
 }
+
 let array5 = [1, 2, 4, 3];
 console.log(getSumOfOddIndex(array5));
 //№6(Arrays)
-function getReverseOfArray(arr){
+function getReverseOfArray(arr) {
     if(!arr || arr.length === 0 || (typeof(arr) !== 'object')) return 'Wrong Input!'
     let reverse = [];
 
-    for (let i = length-1 ; i >= 0 ; i--){
+    for (let i = length-1 ; i >= 0 ; i--) {
         reverse[reverse.length] = array[i];     
     }
     
@@ -274,12 +277,12 @@ function getReverseOfArray(arr){
 }
 
 //№7(Arrays)
-function getQuantityOfOddElements(arr){
+function getQuantityOfOddElements(arr) {
     if(!arr || arr.length === 0 || (typeof(arr) !== 'object')) return 'Wrong Input!'
     let quantity = 0;
     let sum = 0;
     
-    for( let i = 0 ; i<arr.length ; i++){
+    for( let i = 0 ; i<arr.length ; i++) {
         if (arr[i] % 2 !== 0) {
             quantity++;
         }
@@ -290,11 +293,11 @@ function getQuantityOfOddElements(arr){
 let array7 = [2, 3, 4, 1];
 console.log(getQuantityOfOddElements(array7));
 //№8
-function getHalfReverseOfArray(arr){
+function getHalfReverseOfArray(arr) {
     if(!arr || arr.length === 0 || (typeof(arr) !== 'object')) return 'Wrong Input!'
     let reverse = [];
 
-    for(let i = length - 1; i >= 0 ; i--){
+    for(let i = length - 1; i >= 0 ; i--) {
 
     }
 }
